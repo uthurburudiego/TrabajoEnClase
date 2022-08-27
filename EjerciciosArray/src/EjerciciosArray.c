@@ -1,41 +1,36 @@
 /*
  ============================================================================
- Name        : Ejercicio5.c
+ Name        : EjerciciosArray.c
  Author      : Diego Uthurburu
  Version     :
  Copyright   : Your copyright notice
- Description :
+ Description : Hello World in C, Ansi-style
  ============================================================================
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "Alumnos.h"
-#include "utn.h"
-#include "Producto.h"
-#include <string.h>
+#define TAM 5
 
-
-
-
-int main(void)
-{
+int main(void) {
 
 	setbuf(stdout, NULL);
 
-	Producto productos[TAM];
+int numeroIngresado [TAM] ;
+int suma=0;
+
+for (int i = 0;  i <TAM; i++)
+{
+	printf("Ingrese un numero :");
+	scanf("%d",&numeroIngresado[i]);
+
+	suma= suma + numeroIngresado[i];
 
 
+}
 
-	inicializarArrayProducto(productos, TAM, 1);
-
-
-	prod_cargarProducto(productos,TAM,1);
-	prod_cargarProducto(productos,TAM,12);
-
-imprimirArrayProducto(productos, TAM);
+printf("El resultado de la suma es: %d", suma);
 
 
 	return EXIT_SUCCESS;
 }
-
